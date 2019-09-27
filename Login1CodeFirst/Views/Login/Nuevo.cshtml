@@ -1,0 +1,61 @@
+﻿@model Login1CodeFirst.Models.Usuario
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>  NUEVO REGISTRO DE USUARIOS</h2>
+
+@using (Html.BeginForm("Nuevo", "Login", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            <!--NOMBRE PERSONA-->
+            @Html.LabelFor(d => d.Nombre)
+            @Html.TextBoxFor(d => d.Nombre, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Nombre, "", new { @class = "label label-danger" })
+            <br />
+
+            <!--NOMBRE APELLIDO-->
+            @Html.LabelFor(d => d.Apellido)
+            @Html.TextBoxFor(d => d.Apellido, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Apellido, "", new { @class = "label label-danger" })
+            <br />
+
+            <!--NOMBRE DIRECCION-->
+            @Html.LabelFor(d => d.Direccion)
+            @Html.TextBoxFor(d => d.Direccion, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Direccion, "", new { @class = "label label-danger" })
+            <br />
+
+            <!--NOMBRE ROL USUARIO-->
+            @Html.LabelFor(d => d.RoldID)
+            @Html.DropDownListFor(d => d.RoldID, (SelectList)ViewBag.Roles, "[Seleccione]", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.RoldID, "", new { @class = "label label-danger" })
+            <br />
+
+            <!--NOMBRE NOMBRE USUARIO-->
+            @Html.LabelFor(d => d.UserName)
+            @Html.TextBoxFor(d => d.UserName, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.UserName, "", new { @class = "label label-danger" })
+            <br />
+
+            <!--NOMBRE CONTRASEÑA USUARIO-->
+            @Html.LabelFor(d => d.Password)
+            @Html.PasswordFor(d => d.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Password, "", new { @class = "label label-danger" })
+            <br />
+            <br />
+            <!--BOTON GUARDAR DATOS-->
+            <div>
+                <input value="Guardar" class="btn btn-primary" type="submit" />
+            </div>
+            <br />
+
+            <!--link iniciar sesión-->
+            <a href="Index">Iniciar Sesión</a>
+        </div>
+    </div>
+}
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+}
