@@ -140,6 +140,7 @@
       <DependentUpon>201909120413181_alter_table_usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Encrypt.cs" />
     <Compile Include="Models\LoginContext.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Usuario.cs" />

@@ -132,13 +132,15 @@ namespace Login1CodeFirst.Controllers
                 {
                     using (LoginContext db = new LoginContext())
                     {
+                        string cadenaEncriptada = Encrypt.GetMD5(model.Password);
+
                         var oUsu = new Usuario();
                         oUsu.Nombre = model.Nombre;
                         oUsu.Apellido = model.Apellido;
                         oUsu.Direccion = model.Direccion;
                         oUsu.RoldID = model.RoldID;
                         oUsu.UserName = model.UserName;
-                        oUsu.Password = model.Password;
+                        oUsu.Password = cadenaEncriptada;
 
                         db.Usuarios.Add(oUsu);
                         db.SaveChanges();
