@@ -15,16 +15,16 @@ namespace Login1CodeFirst.Migrations
 
         protected override void Seed(LoginContext context)
         {
-            context.Roles.AddOrUpdate(
-                p => p.RolName,
-                new Rol { RolName = "Administrador" },
-                new Rol { RolName = "Cliente" }
-                );
+            //context.Roles.AddOrUpdate(
+            //    p => p.RolName,
+            //    new Rol { RolName = "Administrador" },
+            //    new Rol { RolName = "Cliente" }
+            //    );
 
-            context.Usuarios.AddOrUpdate(
-                u=>u.Nombre,
-                new Usuario { Nombre="Abel", Apellido="Cabrera", Direccion="Reu",UserName="acabrera",Password="123",RoldID=1}
-                );
+            //context.Usuarios.AddOrUpdate(
+            //    u=>u.Nombre,
+            //    new Usuario { Nombre="Abel", Apellido="Cabrera", Direccion="Reu",UserName="acabrera",Password="123",RoldID=1}
+            //    );
         }
     }
 }

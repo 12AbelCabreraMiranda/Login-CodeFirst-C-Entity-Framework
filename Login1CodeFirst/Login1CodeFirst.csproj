@@ -139,10 +139,20 @@
     <Compile Include="Migrations\201909120413181_alter_table_usuario.Designer.cs">
       <DependentUpon>201909120413181_alter_table_usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910130644096_AddSesion.cs" />
+    <Compile Include="Migrations\201910130644096_AddSesion.Designer.cs">
+      <DependentUpon>201910130644096_AddSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910130650027_AlterSesion.cs" />
+    <Compile Include="Migrations\201910130650027_AlterSesion.Designer.cs">
+      <DependentUpon>201910130650027_AlterSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Encrypt.cs" />
     <Compile Include="Models\LoginContext.cs" />
+    <Compile Include="Models\ProfesionVista.cs" />
     <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\Sesion.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
@@ -189,6 +199,7 @@
     <Content Include="Views\Login\Admin.cshtml" />
     <Content Include="Views\Login\Cliente.cshtml" />
     <Content Include="Views\Login\Nuevo.cshtml" />
+    <Content Include="Views\Login\GuardarProfesion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -212,6 +223,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909120413181_alter_table_usuario.resx">
       <DependentUpon>201909120413181_alter_table_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910130644096_AddSesion.resx">
+      <DependentUpon>201910130644096_AddSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910130650027_AlterSesion.resx">
+      <DependentUpon>201910130650027_AlterSesion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -88,3 +88,5 @@ C:\Users\AbelCabreraMiranda\Documents\Visual Studio 2019\Projects\Login1CodeFirs
 C:\Users\AbelCabreraMiranda\Documents\Visual Studio 2019\Projects\Login1CodeFirst\Login1CodeFirst\obj\Debug\Login1CodeFirst.Migrations.Model_User_y_Rol.resources
 C:\Users\AbelCabreraMiranda\Documents\Visual Studio 2019\Projects\Login1CodeFirst\Login1CodeFirst\obj\Debug\Login1CodeFirst.csproj.GenerateResource.cache
 C:\Users\AbelCabreraMiranda\Documents\Visual Studio 2019\Projects\Login1CodeFirst\Login1CodeFirst\obj\Debug\Login1CodeFirst.Migrations.alter_table_usuario.resources
+C:\Users\AbelCabreraMiranda\Documents\Visual Studio 2019\Projects\Login1CodeFirst\Login1CodeFirst\obj\Debug\Login1CodeFirst.Migrations.AddSesion.resources
+C:\Users\AbelCabreraMiranda\Documents\Visual Studio 2019\Projects\Login1CodeFirst\Login1CodeFirst\obj\Debug\Login1CodeFirst.Migrations.AlterSesion.resources

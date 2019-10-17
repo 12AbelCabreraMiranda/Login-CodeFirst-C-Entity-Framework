@@ -1,0 +1,33 @@
+﻿@model Login1CodeFirst.Models.ProfesionVista
+@{
+    ViewBag.Title = "GuardarProfesion";
+}
+
+<h2>GuardarProfesion</h2>
+
+
+@using (Html.BeginForm("GuardarProfesion", "Login", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            <!--NOMBRE PERSONA-->
+            @Html.LabelFor(d => d.Profesion)
+            @Html.TextBoxFor(d => d.Profesion, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Profesion, "", new { @class = "label label-danger" })
+            <br />
+
+            @if(!string.IsNullOrEmpty(ViewBag.Message))
+            {
+            <p class="errorMessage">@ViewBag.Message</p>
+            }
+            <!--BOTON GUARDAR DATOS-->
+            <div>
+                <input value="Guardar" class="btn btn-primary" type="submit" />
+            </div>
+            <br />
+
+            <!--link iniciar sesión-->
+            <a href="Admin">Iniciar Sesión</a>
+        </div>
+    </div>
+}

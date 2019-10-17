@@ -12,5 +12,6 @@ namespace Login1CodeFirst.Models
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Rol> Roles { get; set; }
+        public DbSet<Sesion> Sesion { get; set; }
     }
 }

@@ -38,7 +38,11 @@ namespace Login1CodeFirst.Controllers
                         if(rol != null)
                         {
                             Session["User"] = $"{user.Nombre} {user.Apellido}";
+                            Session["UserLogueado"] = $"{user.UserName}";
                             Session["Rol"] = rol.RolName;
+
+
+                            
 
                             if (rol.RolName.Equals("Administrador"))
                             {
@@ -126,6 +130,8 @@ namespace Login1CodeFirst.Controllers
         [HttpPost]
         public ActionResult Nuevo(Usuario model)
         {
+            
+            
             try
             {
                 if (ModelState.IsValid)
@@ -155,6 +161,67 @@ namespace Login1CodeFirst.Controllers
             }
         }
 
+        [HttpGet]
+        public ActionResult GuardarProfesion()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public ActionResult GuardarProfesion( ProfesionVista datos)
+        {
+            //Session["UserLogueado"].ToString();
+            if (ModelState.IsValid)
+            {
+                if (datos.singIn() == false)
+                {
+                    ViewBag.Message = "El usuario o el email ya están registrados";
+                    return View("GuardarProfesion", datos);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+            }
+            else
+            {
+                return View("GuardarProfesion");
+            }
+
+            //try
+            //{
+            //    if (ModelState.IsValid)
+            //    {
+            //        using (LoginContext db = new LoginContext())
+            //        {
+            //            //CAPTURAR USUARIO LOGUEADO
+            //            var usuarioLogueado = Session["UserLogueado"].ToString();
+
+            //            //var user = db.Sesion
+            //            //              .Where(x => x.Profesion == model.Profesion)
+            //            //              .FirstOrDefault();                      
+            //            //SI NO EXISTE, LO GUARDA EL NUEVO REGISTRO                        
+            //            var sesion1 = new Sesion
+            //            {
+            //                Profesion = model.Profesion,
+            //                NombreSesion = usuarioLogueado
+            //            };
+            //            db.Sesion.Add(sesion1);
+            //            db.SaveChanges();                        
+
+            //        }
+            //        return Redirect("/Login/Admin");
+            //    }
+            //    return View(model);
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new Exception(ex.Message);
+            //}
+        }
+
+       
 
     }
 }
